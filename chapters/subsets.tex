@@ -1,0 +1,63 @@
+\chapter{Subsets}
+\label{subsets}
+\depends{sets}
+\sent{0.04}
+
+\begin{itemize}
+\item
+A set is a \term{subset} of another set, if all of its members belong to that other set.
+\item
+Formally, $A$ is a subset of $B$, written $A \subseteq B$, if 
+\[ x \in A \text{ for every } x \text{ for which } x \in B \]
+\item
+We can also say that $A$ is contained within $B$.
+\item
+For any set, the empty set is a subset. This is because all the elements of the empty set (none of them) belong to that set.\footnote{This is an important process, and one which we nearly passed over without comment. If we want to know if something is true for \emph{all} things of a particular type, and there are \emph{none} of them, then we will say that it \emph{is} true for all of them. This is a kind of negative definition of something \emph{always} being true: it is always true if we \emph{can't} find a single example where it \emph{isn't} true.} 
+\item
+For any set, the set itself is a subset. This is because everything which belongs to the set belongs to the set.
+\item
+All subsets except for the set itself are referred to as \term{proper subsets}.
+\item
+Thus the subsets of $\{ 1, 2 \}$ are 
+\[ \{\}, \{1\}, \{2\}, \text{ and } \{1, 2\} \] 
+and its proper subsets are $\{\}$, $\{1\}$ and $\{2\}$.
+\item
+If $A$ is a proper subset of $B$, in other words $A$ is a subset of $B$ and $A$ and $B$ are \highlight{not} equal, we write
+\[ A \varsubsetneq B .\]
+\item
+If $A \subseteq B$ and $B \subseteq C$, then $A \subseteq C$. This is because everything that is in $A$ is in $B$, and everything that is in $B$ is in $C$, therefore everything which is in $A$ is in $C$.
+\item
+If we define a set using the second method in chapter \ref{sets}, then it will be a subset of the base set. 
+\item
+If $A \subseteq B$ and $B \subseteq A$, then $A$ and $B$ are the same. This is because, if every element of $A$ is in $B$ and every element of $B$ is in $A$, then $A$ and $B$ have exactly the same elements.\footnote{We haven't pointed it out before, but two sets are the same if and only if they have exactly the same elements.} Another way of saying this is that if $A$ and $B$ are different, then either $A$ contains something which is not in $B$ (and therefore $A \nsubseteq B$), or $B$ contains something which is not in $A$ (and therefore $B \nsubseteq A$).
+\item
+Don't confuse ``$A \varsubsetneq B$'' with ``$A \nsubseteq B$''!
+\item
+So the last paragraph but one implies that for two sets $A$ and $B$ no more than one of the following three cases holds:
+\begin{enumerate}
+\item
+\[ A \varsubsetneq B \]
+\item
+\[ B \varsubsetneq A \] 
+\item
+\[ A = B \]
+\end{enumerate}
+\item
+However, this list is not exhaustive! Unlike in the case $x < y$, $y < x$, $x = y$ for numbers, it could be the case that none of these are true. For example the sets
+\[ \{ 1, 2, 3\} \text{ and } \{ 3, 4, 5, \text{Richard the Lionheart} \} .\]
+\begin{enumerate}
+\item
+The first one is not a subset of the second (because $1$ does not belong to the second).
+\item
+The second is not a subset of the first (because Richard the Lionheart does not belong to the first).
+\item
+They are not equal.
+\end{enumerate}
+We say that these sets are \term{incomparable}.
+\item
+If we have two sets $A$ and $B$ defined by two different conditions on the same base set, and $A$ is a subset of $B$, we say that the condition that defines $A$ is `stronger' than the condition that defines $B$, and that the condition that defines $B$ is `weaker'. So if 
+\[ A = \{ x \in \mathbb{N} : x \text{ is even} \} \]
+and 
+\[ B = \{ x \in \mathbb{N} : x \text{ is even and bigger than } 5 \} \]
+then since $A \subseteq B$, the condition ``is even'' is weaker than the condition ``is even and bigger than $5$''. We can think of conditions as trying to `stop' as many numbers as possible from passing; the stronger they are the fewer they let past.
+\end{itemize}

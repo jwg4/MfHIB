@@ -1,0 +1,36 @@
+\chapter{More examples of sets}
+\label{more-examples}
+\depends{examples}
+
+\begin{enumerate}[(a)]
+\item\label{single}
+The set of singleton sets whose only member is either the empty set or some other such set:
+\[ \{ \{\{\}\}, \{\{\{\}\}\}, \{\{\{\{\}\}\}\}, \{\{\{\{\{\}\}\}\}\},\ldots\}\]
+We didn't include the empty set in this because it isn't a singleton set.
+\item\label{powersing}
+The set of sets whose members are all sets in the previous set. (The \emph{power set} of (\ref{single}).)
+\begin{align*}
+\{\{\}\}; \{\{\{\}\}\}; \{\{\}, \{\{\}\}\}; \{\{\{\{\}\}\}\}; \{\{\}, \{\{\{\}\}\}\}; \{\{\{\}\}, \{\{\{\}\}\}\}; \\
+\{\{\}, \{\{\}\}, \{\{\{\}\}\}\}; \{\{\{\{\{\}\}\}\}\}; \{\{\}, \{\{\{\{\}\}\}\}\}; \ldots \}
+\end{align*}
+(We use semi-colons instead of commas at the top level only for clarity.)
+This set includes the empty set, because \emph{all} the elements of the empty set are members of (\ref{single}).
+
+The three dots here are extremely vague, although we might be able to check if a given set belongs to this set\footnote{How? Check that it is a set. Then check, for each of its members, whether they belong to (\ref{single}). If they all do, it is.}, it's not at all obvious how we are going to write them successively in a list.
+
+In particular, this set has many infinite elements. For example, (\ref{single}) is a member of this set and it has infinitely many elements. Also the set consisting of all of (\ref{single}) except for $\{\{\{\}\}\}$ is a member of this set and it has infinitely many elements. And so on. The list as written has a pattern to it, but it looks like we are never going to reach any infinite sets.
+\item\label{poww}
+The set of sets which contain only the empty set or other sets from \emph{this} set.\footnote{Is this a proper definition? It seems to be circular. However, we can turn it into a \emph{test} to see whether something belongs to the set. Is it the empty set? If so, then the answer is `Yes'. If not, look at its members. Do they belong to the set? To find out, apply the same test. If they all do, then the answer is `Yes'. If one doesn't, then the answer is `No'.}
+
+This is not the same as (\ref{powersing}). All members of (\ref{powersing}) contain only singleton sets. This set contains sets whose members have all sizes, including infinite. In fact this set is made up of all the elements of (\ref{single}), all the elements of (\ref{powersing}), the power set of (\ref{single}), as well as all the elements of the power set of (\ref{powersing}), the power set of the power set of (\ref{powersing}), the power set of the power set of the power set of (\ref{powersing}), and so on. The first one contains only singletons, the second one contains only sets which contain singletons, the third one contains only sets which contain sets which contain singletons, and so on. Note that none of the members of this set are `infinitely nested', ie there is no
+\[ \{\{\{\{\{\ldots\}\}\}\}\} \]
+where the brackets go on forever.\footnote{We will decide later if such a thing exists and/or is really a set, but for now we just need to know that we exclude it, and any similar things, from our current set.} We have things of all finite amounts of nesting, but no infinite nesting. This is like when we constructed all the natural numbers (infinitely many), but each of the numbers itself was `finite'.
+\item\label{finpow}
+We noticed that many elements of (\ref{powersing}) are infinite, and that it is hard to list them. We can make a set which consists only of the \emph{finite} subsets of (\ref{single}), those sets which have a number of elements which is $0$ or belongs to $\N$, and all of whose elements belong to (\ref{single}).
+
+This is a subset of (\ref{powsing}).
+\item\label{finfin}
+Similarly we can form the set of finite subsets of (\ref{finpow}).
+\item\label{finw}
+We can take the `finite power set' of \label{finfin}, its finite power set, its finite power set, and so on. We can join all of these sets together into one big set, just as we did with the power sets in (\ref{poww}). This set consists of all \emph{finite} sets whose members are other elements of the set. It doesn't contain any infinite sets, and doesn't (as before) contain any `infinitely nested' sets, but is itself infinite. To show this, we have to find only one element of (\ref{single}), one element of (\ref{finpow}), one element of (\ref{finfin}), one element of the finite power set of (\ref{finfin}), all of which are different.
+\end{enumerate} 

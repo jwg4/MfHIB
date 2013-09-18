@@ -1,0 +1,79 @@
+\chapter{Sets}
+\label{sets}
+\depends{howmany}
+\sent{0.02}
+
+\begin{itemize}
+\item
+We used the notion of a set in chapter \ref{howmany} without being exactly clear what it was.
+\item
+A \term{set} is a collection of objects, all different, and without order.
+\item
+These objects are called the \term{members} of the set.
+\item
+If an object $a$ belongs to a set $S$\footnote{We will often, but not always, use lower case letters to stand for numbers or other elements of sets, and upper case letters to stand for sets.}, we write this as 
+\[ a \in S \]
+and if not we write
+\[ a \notin S .\]
+For every set $S$ and every object $a$, one of these two cases holds.
+\item
+The hardest part of the definition is probably `objects'. Objects can be any entities we like of any form. It is not necessary that something has a name or a symbol to be a member or \term{element} of a set. For example the set of all stars (in the sense of astrological bodies) contains stars which do not have names. We cannot refer individually to each member of the set, but it is very easy to refer to the whole set.
+\item
+We also have to decide whether two things are different or not to decide whether we can put them in a set together. This was also discussed in chapter \ref{howmany}. Two things might be considered equal in one setting but different in another.
+\item
+`Without order' is really only meaningful if we want to write down the members of the set in a list. It just means that for example the set
+\[ \{\text{Richard the Lionheart}, 4, \infty \} \]
+is the same as the set 
+\[ \{\infty, \text{Richard the Lionheart}, 4\}. \]
+Previously we have usually written sets of numbers in order, eg 
+\[ \{1, 2, 3, 4, 5\} .\]
+But there is no requirement that we do so; 
+\[ \{3, 5, 2, 4, 1\} \]
+is exactly the same set.
+\item
+We have now seen examples of the two most basic ways of defining a set.
+One way is by writing down a list of all the set's members, as for instance $\{1,2,3,4,5\}$ or $\{\text{Richard the Lionheart}, 4, \infty\}$. The names of the elements are written between curly brackets and separated by commas.
+\item
+This sets we can write down like this include the \term{empty set}, written $\{\}$. The empty set has no members.
+\item
+The second way is by giving some condition which all the members of the set have, and everything which has it is a member of the set. For example, the set of all stars.
+\item
+This is like giving a test, which we can apply to anything we choose. For each thing we apply it to, we get the answer `YES' if the thing is in the set, and the answer `NO' if the thing is not in the set. So to talk about the set of stars, we should be able to test anything to test whether or not it is a star.
+\item
+In practise we can write down some of the rules of the set of stars. Anything which does not exist physically is not a star (so numbers and other mathematical objects are not stars). Anything smaller than a rosebush is not a star. Anything cooler than room temperature is not a star? Black holes are not stars. Anything which does not generate its own energy through nuclear fusion, and has never done so is not a star. And so on.
+\item
+We have eliminated many of the things which are obviously not stars. We could make our classification much much stronger by ruling one way on the other for edge cases; eg things which are either small, cool stars or large, hot planets (or unusually dense clouds of gas, etc.). We could make this test \highlight{definitive}, it would always give an answer, even if other astronomers disagree with our decisions.
+\item
+There are some tricky cases. Is the top half of the sun a star? (Where `top' means the same direction as the Earth's North Pole, or whatever other way makes sense.) It is a large collection of very hot, dense gas, which generates its own energy through nuclear fusion\ldots If we accept that the top half of the sun is a star, and so is the bottom half, is the sun a `composite star' made up of two other stars? If we can divide the sun in any other direction and get two stars, then the sun contains \fterm{infinitely many}, overlapping stars. Is something a star if it overlaps with other stars? What about quarters and eighths of the sun? At what point do we obtain a star whose two halves are non-stars?
+\item
+Furthermore, what about fictional stars? Are they in the set of stars? To say that they are not seems to imply that they are not stars. Clearly a fictional star, at least from a fictional universe which is similar to ours, has many of the properties of non-fictional a star -- it is hot, large, made up of gas, etc. If we base our test on these we will accept fictional stars. Further tests might rule these out but they have to be carefully chosen. A fictional star does `really exist', is `made out of physical matter' inside of its own context. If we say that to be a star, something must not be part of a fictional universe, what about our own Sun? It features in many fictional universes; for example the sun in the books of Jane Austen is the same as that existing in our reality. On the other hand, what if we say that for something to be a star, it must exist in our, real Universe? For us to exclude something fictional, we would have to be sure that it doesn't also exist in the physical Universe, but as far as we know stars from fictional Universes might also be real and be located in some part of our Universe (a long time ago in a galaxy far far away\ldots).
+\item
+To avoid many of these problems we shall usually write sets of the second form as two things: a \term{base set} and a \term{condition}. The set consists exactly of those elements of the base set which satisfy the condition.
+\item
+ For example the set could be the set of numbers and the condition could be ``is less than 4''. If we simply said our set was of everything less than $4$ without a base set, we would have to decide whether every possible thing was less than $4$ or not. If we only allow numbers, this is much easier.\footnote{But still not trivial: are we talking about the counting numbers, negative and positive numbers, fractions, etc. If we include \fterm{complex numbers} we find there is no reasonable definition of whether they are less than 4 or not.}
+\item
+We write the set like this:
+\[ \{ x \in \text{ `numbers'} : x \text{ is less than } 4 \} \]
+or like this:
+\[ \{ x \in \text{ the set of named astrological bodies } : x \text{ is a star} \} .\]
+\item
+We leave out the base set only when it is obvious what the base set is.
+\item
+We can write the empty set in various ways: by having the empty set as a base set
+\[ \{ x \in \{\} : x \text{ is a star} \} = \{\} \]
+or
+\[ \{ x \in \{\} : x \text{ is less than } 4 \}  = \{\} \]
+or by writing a condition which is a contradiction
+\[ \{ x \in \text{ the set of numbers} : x \text{ is less than } 4 \text{ and greater than } 4 \} = \{\} \]
+or is not true for any member of the base set
+\[ \{ x in \text{ the set of astrological bodies} : x \text{ is not an astrological body} \} = \{ \} \]
+\item
+We can write a set of the first form (list) in the second form, by choosing a base set which includes all the elements, and writing a condition which simply describes the members of the list. For instance:
+\[ \{1, 2, 3 \} = \{ x \in \text{`numbers'} : x \text{ is equal to } 1 \text{ or is equal to } 2 \text{ or is equal to } 3 \} \]
+\item
+However, we can't always write a set of the second form in the first form; we might be able to list all its members, or we might not.
+\[ \{ x \in \text{ planets} : x \text{ is closer to the Sun than Earth} \} = \{ Mercury, Venus \} \]
+but 
+\[ \{ x \in \text{ `numbers'} : x \text{ is even} \} \]
+cannot be written as a list of elements, because no list can include all of them.
+\end{itemize}

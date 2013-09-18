@@ -1,0 +1,24 @@
+\chapter{Examples of sets}
+\label{examples}
+\depends{n}
+
+\begin{enumerate}[(a)]
+\item
+The set of singleton sets containing elements from $\N$:
+\[ \{\{1\}, \{2\}, \{3\}, \{4\}, \ldots \} \]
+This is not the same as the set $\N$.
+\footnote{We will use `\ldots' all the time in this chapter -- most of the sets which we mention will be referred to informally rather than precisely defined, but we hope it will be clear exactly which set we are talking about. We could write this set for example as $\{ x : x \subset \N \text{ and } x \text{ has exactly 1 element} \}$. The base set is a bit tricky but we could say for now that it is the `set of all sets'.} 
+\item\label{powersetN}
+The set of subsets of $\N$, also called the \term{power set} of $\N$.
+\item
+The power set of $\{1, 2, 3\}$:
+\[ \{\{\}, \{1\}, \{2\}, \{3\}, \{1,2\}, \{2,3\}, \{1, 3\}, \{1,2,3\} \}\]
+\item
+The set of \fterm{finite} subsets of $\N$. This consists of all members of \ref{powersetN}, whose number of elements is a member of $\N$.
+\item
+The set of singleton sets whose only member is either the empty set or some other such set:
+\[ \{ \{\{\}\}, \{\{\{\}\}\}, \{\{\{\{\}\}\}\}, \{\{\{\{\{\}\}\}\}\},\ldots\}\]
+\item
+The set of sets whose members are all either the empty set or other such sets.
+
+\end{enumerate} 

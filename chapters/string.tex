@@ -1,0 +1,30 @@
+\chapter{Strings}
+\label{string}
+\depends{0and1,counting,successor,howmany}
+
+\begin{itemize}
+\item
+We are now going to look at a totally different use of the symbols $0$ and $1$ than those developed in the chapters \ref{counting}, \ref{successor} and \ref{howmany}.
+\item
+We have seen how $0$ and $1$ are opposed to each other, and how this opposition can be interpreted in various ways (one coming after the other, presence of something rather than nothing, etc.) We can also see a more basic opposition; the opposition between the presence of \highlight{either} $0$ or $1$, and the lack of any symbol. So while we claimed that a difference between $1$ and $0$ is for instance that $1$ is something and $0$ is nothing, in fact we can see that both $0$ and $1$ are \highlight{one symbol} whereas the lack of any symbol is \highlight{zero}.
+\item
+So writing $0$ is not the same as writing nothing, in the same way that writing the word ``nothing'' is not the same as writing nothing. And it seems that the written symbols `$0$' and `$1$' are closer to each other than to nothing.
+\item
+  We can't choose a symbol for `nothing', since if we did nothing would stop being nothing and just be another symbol. However we can decide to surround whatever written thing we are talking about in quotes like this `0' and `1', and use empty quotes `' to show the absence of any symbol. This works fine as long as we don't want to talk about the symbols ``' and `'', or quoted quoted strings, etc.\footnote{In fact we are already using a trick to talk about the symbols which we will use to talk about symbols. We are using written English to refer to parts of our mathematical language, with the convention that \highlight{words} are used to \highlight{refer to} things that are expressed in symbols, and are not themselves part of the symbolic system. So we used the word ``nothing'' to talk about a lack of written symbols, although we claimed that this lack could not have its own symbol. And we used the word ``quotes'' to talk about a quoting symbol, which meant that we didn't have to quote quotes.}
+\item
+So we have three items of interest: `', `0' and `1'. The exact nature of these items has not yet been fixed.
+\item
+We can see that the first item, `' contains 0 symbols, whereas the other two each contain 1 symbol, but differ in the symbol.
+\item
+As when we originally used $0$ and $1$ to count, these two counting numbers suggest others: $2$, $3$ and so on. Thus the three objects suggest others, which contain $2$, $3$ or more symbols each.
+\item
+Another way of looking at this is that say, `$01$' stands in the same relation to `$0$' as `$1$' does to `'. When we only had `0' and `1', it might not have seemed natural to combine them into `$00$', `$01$' etc. (as opposed to adding them, finding their successors, \ldots) But once we have seen that we can go from `' to `0' or `1' (not by adding a number, but by adding a \highlight{symbol}), it makes sense that we can go from `0' to `00' or `01'.
+\item
+We can now think of as many of our new type of object as we like 
+\[
+`00', `01', `10', `11', `000', `001', `010' `011', `100', `101', `110', `111' \ldots \]
+\[ `0001101010', `0000000000000000', `1111110', \ldots \]
+\item
+Thus, from a set of symbols $\{`0', `1'\}$, we have got to a set of \term{strings}, consisting of $0$ or more symbols taken in order, where each symbol is an element of $\{`0', `1'\}$.
+
+\end{itemize} 

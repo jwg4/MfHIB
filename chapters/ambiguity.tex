@@ -1,0 +1,73 @@
+\chapter{The ambiguity of counting}
+\label{ambiguity}
+\depends{ordering,howmany}
+\sent{0.05}
+
+\begin{itemize}
+\item
+When we developed numbers beyond $0$ and $1$, in Chapter \ref{counting}, we started with the observation that the set $\{\}$ has $0$ members, the set $\{0\}$ has $1$ member and the set $\{0,1\}$ has $2$ members, where we had to invent the number $2$ in order to count all the previous numbers.
+\item
+So the first things that we counted were the numbers, starting with $0$.
+\item
+This means that the numbers played a double role in the development of counting, as the result of counting, and as \highlight{objects} to be counted.
+\item
+This is neat, because as we saw, each time we counted a set we ended up with a new number, which we could add to our list of things to count.\footnote{As it works out, the new numbers appear at exactly the rate we need them to be counted. This is why we started counting with $0$, and not $1$ or any other number. If our first number had been $1$, we would have counted the elements of the set $\{1\}$ and seen that there was $1$ of them. So we would never have been able to invent the number $2$.} However it is also confusing, because it is hard to distinguish between the two different ways each number is used.
+\item
+If we had already had some list of things, which appear in a given order and go on forever, we could have used these as objects to count. For instance, it is well known that the first man, Adam, ``begat CAIN who begat ENOCH who begat IRAD who begat MEHUJAEL who begat METHUSAEL who begat LAMECH'' and so on. If we weren't previously aware of the numbers, we could motivate them by explaining that $0$ refers to the number of the people that existed before Adam, in other words no-one, that $1$ counts `Adam', that $2$ counts `Adam and Cain', that $3$ counts 'Adam and Cain and Enoch' and so on.\footnote{Although the sequence currently ends with someone alive today who has no son, we can quite easily believe that it will continue forever. So to develop new numbers, we only have to wait for more descendants to be born. Or we can even just talk about the future members of the sequence, referring to them as ``Russell Brand's son and Russell Brand's grandson and Russell Brand's great-grandson\ldots'', supposing that Russell Brand is the last element of the \fterm{sequence} alive today. Even if we knew that the sequence ended with say, Russell Brand's future son, who himself will not have any sons, we could still, for the purposes of understanding numbers, talk about the further descendants who \highlight{might} have existed.  As we have tried to stress from the beginning, the names of the numbers are arbitrary; our usual names seem more convenient and logical than `Enoch', `Gad' and `Russell Brand's great-great-great-great-great-great-great-great-great-grandson if he had had one', but this is \highlight{probably} only because we are used to them.}
+\item
+The problem with using a pre-made list is that we might not believe, before we start counting, that a list of entities, all different, going on forever, and with a specific order, actually exists. If there are only \fterm{finitely} many objects in the whole of the universe, the only way to generate an infinite list of numbers is by counting the numbers as we create them.
+\item
+Once we know that the process of \highlight{counting} generates a list of numbers in a particular order which goes on forever, we can easily imagine other such lists, and use them as a basis for counting. For instance if the numbers are 
+\[ 0, 1, 2, 3, 4, \ldots \] 
+we could also have the list 
+\[ A0, A1, A2, A3, A4, \ldots \]
+or 
+\[ (0,0), (0,1), (1,1), (0,2), (1,2), (2,2), (0,3), \ldots \]
+Then we would define the counting numbers something like this:
+\begin{align*}
+1 &\text{ is the number of elements of } \{(0,0)\}\\
+2 &\text{ is the number of elements of } \{(0,0), (0,1)\}\\
+3 &\text{ is the number of elements of } \{(0,0), (0,1), (1,1)\}\\
+4 &\text{ is the number of elements of } \{(0,0), (0,1), (1,1), (0,2)\}\\
+\end{align*}
+This is obviously confusing.
+\item
+If we wanted to be particularly difficult we could take a list which was made up of some, but not all of the counting numbers
+\[ 2, 3, 5, 7, 11, 13, \ldots \]
+or the counting numbers in some other order
+\[ 8, 800, 808, 818, 880, 888, 885, 884, 889, \ldots \]
+so if we wanted to explain to someone what `4' was, we would say ``4 corresponds to the numbers 2, 3, 5 and 7'', or ``4 is the number associated with the list `8, 800, 808, 818' ''.
+This is equally obviously, equally confusing.
+\item
+The point of all this is that we associated the number $4$ with the set $\{0, 1, 2, 3\}$ and the number $5$ with the set $\{0,1,2,3,4\}$ and so on, in order to create all the numbers. (In fact, we initially defined a new number to be `the number of elements of $\{0,1,2,3\}$', and then accepted that we might use the name `4' to refer to it.) This is a bit, but not totally confusing. To make sense of it, we have to understand the two different ways numbers are used, but it is actually helpful that $4$ is not one of the elements of $\{0,1,2,3\}$. Because different symbols are being used, it is clear that $4$ and $\{0,1,2,3\}$ are two different things, and we can check that there is no circular reasoning going on.
+\item
+In all everyday use, in a lot of mathematics, and usually here from now on, we will instead associate the number $4$ with the set $\{1,2,3,4\}$, the number $5$ with the set $\{1,2,3,4,5\}$ and similarly all other numbers with the corresponding set.
+\item
+This is confusing, but not \highlight{obviously} confusing. At first sight it appears to be straightforward and logical.
+\item
+The problem is that when we count something, it might not be clear which sense of `$4$' we are using. 
+\item
+Suppose that we count something of which there are $4$, for instance the Beatles or the points of the compass. Are we saying that John Lennon is Beatle `1', that Paul McCartney is Beatle `2', that George Harrison is Beatle `3' and that Ringo Starr is Beatle `4', or are we simply saying that the Beatles taken as a unit can be made to correspond to the set $\{1,2,3,4\}$, \highlight{without} deciding which Beatles goes with which number?
+\item
+The process of counting often takes place by pointing at individual objects in turn, and saying one number for each one, with the numbers taken in turn. However, what we are often trying to achieve is just deciding \highlight{how many} there are. The order that we counted them in, and so the actual number that we associated with each one along the way, do not actually matter. If we discover how many elements something has by another method, this is usually still referred to as counting.
+\item
+On the other hand, sometimes we count things, and each individual association \highlight{does} matter. The days in January each have a number from $1$ to $31$. This is done not to find out how many days January has, but firstly to be able to tell them apart, so that we can talk about the $1^{st}$ of January and the $13^{th}$ of January without confusing the two. Secondly, it also specifies an \fterm{order} for January: the days of January take place in the order January $1^{st}$, January $2^{nd}$, January $3^{rd}$ and so on.\footnote{If you described to me a month, in the sense of 31 consecutive days, which was made up of days of January, but in a different order, it would not be at all clear to me that this was January.}
+\item
+These are not just two purposes of counting, but two paradigms or philosophies around counting. 
+\item
+Chapter \ref{ordering} extends Chapter \ref{counting} by talking about the order involved in counting. It starts from the basis that $0$ and $1$ have an order, \highlight{$0$ and then $1$}.
+\item
+This type of counting is associated with time as opposed to space. (When I count things giving a number to each one, I do it in time. The \highlight{first} object is associated with the \highlight{first} number, and so on.) So the obvious example of this type of counting is the days of January, or the years since the birth of Christ, etc. But there are other examples which are not objects located in time, such as the chapter numbers of this book. Note however that there is a connection to time: the chapters are numbered not just so they can be told apart, but also because the book is intended to be read in a certain order, or was written in a certain order.
+\item
+This type of counting has its own names for the numbers: `first', `second', `third', `fourth', etc. These are \term{ordinal} numbers.
+\item
+Chapter \ref{howmany} looks at the other type of counting. It is based on considering $0$ to be nothing, and $1$ to be something. 
+\item
+This type of counting takes place in space rather than time. If I claim that the set of Beatles has the same number of elements are the points of a compass, the sides of a square, the suits in a deck of cards, and the set $\{1,2,3,4\}$ (namely 4), then I do not need to put any of these sets into order.
+\item
+The Beatles exist alongside each other all at the same time (at least in thought) and so do the points of a compass. To check that there are the same number of each, we might make them correspond one-by-one, however these correspondences (such as ``Harrison--North'', etc.) can also exist alongside each other at the same time. It is not necessary to choose an order for either set, (although both seem to have a natural order) or to make them correspond based on those orders.
+\item 
+Numbers of this form are \term{cardinal} numbers, and their names are `one', `two', `three', `four', etc.
+\item
+Some uses of numbers allow us to tell how many of something there is, but also put a useful order on those objects as a side-effect. Some uses of numbers are purely for telling us how many, and no order exists. A bank balance counts a number of identical items (pounds), but the pounds it refers to are not individually numbered. 
+\end{itemize}

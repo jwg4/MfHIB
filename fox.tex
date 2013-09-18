@@ -1,0 +1,111 @@
+\documentclass{book}
+
+%%%%%%%%%%%%%%%% packages
+
+\usepackage{amssymb, amsmath}
+\usepackage{bbding}
+%\usepackage{mathdots}
+\usepackage{endnotes}
+\usepackage{graphicx}
+\usepackage{enumerate}
+
+\usepackage{nameref}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%%%%%%%%%%%%%%% macros
+ 
+\renewcommand{\notesname}{James' response}
+\newcommand{\fterm}[1]{\emph{#1}}
+\newcommand{\term}[1]{\textsc{#1}}
+\newcommand{\highlight}[1]{\textbf{#1}}
+
+\newcommand{\cquote}[2]{}
+
+\newcommand{\version}{0.06}
+\newcommand{\james}[1]{\endnotetext{#1}}
+\newcommand{\sent}[1]{}
+
+\newcommand{\N}{\mathbb{N}}
+
+\let\reallabel\label
+\renewcommand\label[1]{\gdef\savelabel{#1}\reallabel{#1}}
+
+\newcommand{\depends}[1]{\textbf{(\savelabel)}\\
+\includegraphics{graphs/{\savelabel}.png}}
+
+\title{Maths for Highly Intelligent Beginners}
+
+\begin{document}
+%%%%%%%%%%%
+\frontmatter
+%%%%%%%%%%%
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+\includegraphics[height=\textheight]{full.png}
+%%%%%%%%%%%
+\mainmatter
+%%%%%%%%%%%
+\fancyhead[RO]{\thepage \, (v\version)}
+\fancyhead[LE]{\thepage \, (v\version)}
+%\fancyhead[RE,LO]{}
+
+
+% Chapters in their definitive ordering:
+\part{Chapters in their definitive ordering}
+\include{chapters/0and1}
+\include{chapters/counting}
+\include{chapters/successor}
+\include{chapters/howmany}
+\include{chapters/sets}
+\include{chapters/n}
+\include{chapters/ordering}
+\include{chapters/subsets}
+\include{chapters/ambiguity}
+\include{chapters/carrying}
+
+% Unsorted chapters:
+\part{Unsorted chapters}
+\include{chapters/examples}
+\include{chapters/moreexamples}
+\include{chapters/true}
+\include{chapters/howto}
+
+\include{chapters/01symbols}
+
+\include{chapters/coin}
+\include{chapters/probcrit}
+
+\include{chapters/atob}
+
+\include{chapters/string}
+
+\include{chapters/implication}
+
+\part{Fragments}
+\include{chapters/mapping}
+\include{chapters/notation}
+\include{chapters/weird}
+\include{chapters/well-defined}
+\include{chapters/shepherd}
+\include{chapters/addition}
+\include{chapters/cartesian}
+\include{chapters/power}
+\include{chapters/quoting}
+\include{chapters/tuples}
+\include{chapters/unary}
+\include{chapters/universal}
+
+
+%%%%%%%%%%%
+\backmatter
+%%%%%%%%%%%
+
+\include{notes}
+
+\end{document}

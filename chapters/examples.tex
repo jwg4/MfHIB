@@ -1,0 +1,42 @@
+\chapter{Examples of sets}
+\label{examples}
+\depends{n}
+
+\begin{enumerate}[(a)]
+\item
+{\sc EVEN}, the set of even members of $\N$.
+\[ \{2, 4, 6, 8, 10, 12, \ldots \} \]
+\item
+The set of singleton sets containing elements from $\N$:
+\[ \{\{1\}, \{2\}, \{3\}, \{4\}, \ldots \} \]
+This is not the same as the set $\N$.
+\footnote{We will use `\ldots' all the time in this chapter -- most of the sets which we mention will be referred to informally rather than precisely defined, but we hope it will be clear exactly which set we are talking about. We could write this set for example as $\{ x : x \subset \N \text{ and } x \text{ has exactly 1 element} \}$. The base set is a bit tricky but we could say for now that it is the `set of all sets'.} 
+\item\label{powersetN}
+The set of subsets of $\N$, also called the \term{power set} of $\N$.
+\item
+The power set of $\{1, 2, 3\}$:
+\[ \{\{\}, \{1\}, \{2\}, \{3\}, \{1,2\}, \{2,3\}, \{1, 3\}, \{1,2,3\} \}\]
+\item
+The set of \fterm{finite} subsets of $\N$. This consists of all members of (\ref{powersetN}), whose number of elements is a member of $\N$.
+\item
+The set of \fterm{cofinite} subsets of $\N$. These are all subsets of $\N$, which only \emph{miss} a finite number of elements. For example, the set
+\[ \{ 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, \ldots \} \]
+or the set 
+\[ \{ 16, 30, 44, 200, 201, 202, 203, 204, 205, 206, 207, \ldots \} \]
+Not all subsets of $\N$ are finite or cofinite, for example {\sc EVEN} is neither.
+\item
+The set of \emph{all} singleton sets. Any set which contains a single element is a member of this set, and no other.
+\item
+The set of letters of the alphabet
+\[ \{'a', 'b', 'c', 'd', 'e', \ldots, 'x', 'y', 'z' \} \]
+Note the unmathematical three dots which represent something we all know but we don't have space for, rather than something we can fill in by following a pattern.
+\item
+The set of `doubleton' sets containing letters of the alphabet only.
+\[ \{ \{a, b\}, \{a,c\}, \{a,d\}, \ldots, \{a, z\}, \{b,c\}, \{b,d\}, \ldots \} \]
+\item
+The set of two-letter `words' made up of letters of the alphabet. All words are counted regardless of whether they appear in language or not.\footnote{Making Scrabble very easy.}
+\[ \{ `aa', `ab', `ac', `ad', `ae', \ldots, `ba', `bb', `bc', \ldots `zz' \}\]
+\item
+The set of all `words' of any number of letters greater than zero.
+\[ `a', `b', `c', \ldots, `z', `aa', `ab', \ldots, `zz', `aaa', `aab', \ldots \}\]
+\end{enumerate} 

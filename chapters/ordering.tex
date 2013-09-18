@@ -1,0 +1,81 @@
+\chapter{An ordering}
+\label{ordering}
+\depends{successor,sets}
+\sent{0.03}
+
+\begin{itemize}
+\item
+In the chapter `0, followed by 1' we established, without explicitly defining it, an ordering for the numbers which we generated (including all the numbers which we know we \highlight{could} generate, even if we haven't actually done it).
+\item
+This ordering was called `comes after'. 
+\item
+For any pair of numbers, call them $a$ and $b$, one of two cases holds. Either $a$ \term{comes after} $b$, or $a$ \term{does not come after} $b$.
+\item
+Examples:
+\begin{align*}
+SSS0 & \text{ comes after } 0 \\
+SSSSSSSSSSSSSSS0 & \text{ comes after } SSSSSSSSSSSSSS0 \\
+SS0 & \text{ does not come after } SS0 \\
+SSSSSSS0 & \text{ does not come after } SSSSSSSSSS0 \\
+\end{align*}
+\item
+It is almost completely obvious which of the two cases holds in each case. Nonetheless we can try and make it formal, for instance with a rule like this:
+\begin{quote}$a$ comes after $b$ if $a$ is the successor of $b$, or if $a$ comes after the successor of $b$, otherwise it does not.
+\end{quote}
+\item
+Let us check that this rule gives us the right answers for the examples above:
+\begin{enumerate}[i]
+\item
+$SSS0$ is not the successor of $0$. Does it come after the successor of $0$, $S0$? $SSS0$ is not the successor of $S0$, so we check if it comes after the successor of $S0$, $SS0$. $SSS0$ is the successor of $SS0$, so it comes after $SS0$. Therefore it comes after $S0$, therefore it comes after $0$.
+\item
+$SSSSSSSSSSSSSSS0$ is the successor of $SSSSSSSSSSSSSS0$, therefore it comes after $SSSSSSSSSSSSSS0$.
+\item
+$SS0$ is not the successor of $SS0$. Does it come after the successor of $SS0$, $SSS0$? It is not the successor of $SSS0$, so we check if it comes after the successor of $SSS0$, $SSSS0$. It is not the successor to $SSSS0$, so we check if it comes after the successor to $SSSS0$, namely $SSSSS0$\ldots
+\end{enumerate}
+\item
+The last example shows us that although the rule seems to make sense, it doesn't necessarily lead to a proper \fterm{decision procedure} for whether one thing comes after another. We end up checking a list of numbers which never ends
+\[ SSS0, SSSS0, SSSSS0, SSSSSS0, \ldots \]
+to see if any of them are equal to $SS0$. This means our task nevers ends, and so we never obtain a straight answer. We might `know' that this list will never contain $SS0$, but we have to add some ideas to our rule to make sure we can always take advantage of our knowledge.\footnote{The idea of a decision procedure comes from the theory of sets, see chapter \ref{sets}. In this case we are doing exactly what is described there, namely checking if a specific thing ($SS0$) belongs to a specific set (the set ``things which come after $SS0$''). The problem of decision procedures which take forever is a genuine one. In this case we will be able to work around it, but usually we can't.}
+\item
+If we look at the definition of ``comes after'', we can see exactly how it works. If $a$ comes after $b$ then $a$ is the successor of $b$, or $a$ comes after the successor of $b$. If $a$ comes after the successor of $b$, then it is the successor of the successor of $b$, or it comes after the successor of the successor of $b$\ldots. We conclude that $a$ is the successor of $b$ or the successor of the successor of $b$, or the successor of the successor of the successor of $b$, or the successor of the successor of the successor of the successor of $b$, etc.
+\item
+We are going to establish three important rules for answers to the question ``Does (something) come after (something else)?''
+\begin{enumerate}[I]
+\item
+Nothing comes after itself.
+\item
+For every two things either one comes after the other, or the other one comes after the first one, or they are equal. Only one of these cases holds. (They can't both come after each other, and the first rule means they can't be equal \highlight{and} one of them come after the other.)\footnote{Here it is understood that `itself', in rule I, means `that thing and anything equal to it'. We have run into a very important and difficult to resolve question. When we talk about two things, is it natural to exclude or include the case in which the two things are in fact the same thing? To resolve this we have to decide what it means for two things to be \fterm{equal}, without being \highlight{the same thing}, or alternatively we have to understand how we can have some kind of collection of two things, without knowing whether or not it is actually the same thing twice\ldots}
+\item
+Something which comes after something else comes after all the things which that something else itself comes after.
+\end{enumerate}
+\item
+We can make these rules much more easy to understand if we express them using \fterm{symbols} for unspecified numbers:
+\begin{enumerate}[I]
+\item
+$a$ \highlight{does not come after} $a$.
+
+Here `$a$' represents any number in our system. The meaning of this is that if you choose some number, then replace `$a$' by that number everywhere it occurs in the sentence, then the sentence becomes a true statement about our numbers.
+\item
+Exactly one of the following cases holds:
+\begin{itemize}
+\item
+  $a$ \highlight{comes after} $b$.
+\item
+  $b$ \highlight{comes after} $a$.
+\item
+  $a$ and $b$ are \highlight{the same number}.
+\end{itemize}
+
+Here `$a$' and `$b$' represent any two numbers. This includes the cases where `$a$' and `$b$; both represent the same number. Iow we can take the above statement, replace every `$a$' by some number (the same one for each `$a$'), replace every `$b$' by some number (the same one for each `$b$', either the same as for `$a$' or not), and we will get a true statement about numbers.
+\item
+If $a$ \highlight{comes after} $b$ and $b$ \highlight{comes after} $c$, then $a$ \highlight{comes after} $c$.
+\end{enumerate}
+\item
+We can check these rules based on our intuitive understanding, directly from the definition, or using the insight in the previous paragraph.
+\item
+Now we can check more effectively whether, given two numbers, one comes after the other. The idea is to use the fact that one and only one of the three cases in the second rule holds.
+\item
+We could first check whether the two things are equal. If so, neither comes after the other. If not, we check if either is the successor of the other. If not, check if either is the successor of the successor of the other, and so on. Eventually we find that one is the successor of the successor of \ldots of the successor of the other. This one comes after the other.\footnote{This is just one possible method for checking, albeit a pretty natural one.}
+\item
+By checking both possibilities at each step, we make sure that the work we do for the decision procedure doesn't go on forever. So `comes after' is \fterm{well-defined} since we can establish its validity for any two numbers.\footnote{Note that the work could go on a very, very long time. We have no guarantee (for two numbers in general) that it will finish by any given time, just that it will finish.}
+\end{itemize}

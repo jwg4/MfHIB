@@ -1,0 +1,86 @@
+\chapter{Carrying on}
+\label{carrying}
+\depends{ordering}
+\sent{0.05}
+
+\begin{itemize}
+\item
+The first number after $0$ is $1$. The first number after $1$ is $2$. The first number after $2$ is $3$. We can continue this list indefinitely. 
+\item
+What is the first number which does not appear in this list?
+\item
+We can describe the number perfectly in terms of the `comes after' ordering. This number comes after all the numbers of the list $0,1,2,3,4,\ldots$. It does not come after itself. Any other number comes after it.
+\item
+Let us check the first statement. We know that $0$ does not come after any other number. Therefore it does not come after our number. If we look at any other number in the list, we know exactly which numbers it comes after. Eg. $5$ comes after $0$, $1$, $2$, $3$ and $4$ and no other numbers. So it does not come after our number. Given any number from the list $0,1,2,3,4,\ldots$, it does not come after our number, nor is it equal to our number. Therefore our number must come after it.
+\item
+The second statement is trivial. No number comes after itself.
+\item
+Let us check the third statement. Suppose a number is not equal to our number, it is not in the list $0,1,2,3,4,\ldots$, and it does not come after our number. Then our number comes after it (since they are not equal). But then our number is not the \highlight{first} number which is not in the list $0,1,2,3,4,\ldots$.
+\item
+Let us call this new number $\omega$\footnote{It could naively be called $\infty$ or infinity.}.
+\item
+Now all the numbers that we know about have this order:
+\[ 0, 1, 2, 3, 4, 5, 6, \ldots, \omega \]
+where the $\ldots$ represents all the numbers that we constructed in Chapter \ref{successor}, in their usual order.
+\item
+What is the next number in this list? The first number which comes after all the numbers in this list is the same as the first number which comes after $\omega$. 
+\item
+In the language of Chapter \ref{successor} we could call it $S\omega$.
+\item
+Since we are using the names $1$, $2$ and so on here, we will instead call it $\omega + 1$.
+\item
+After $\omega + 1$ comes $\omega + 2$.
+\item
+After $\omega + 2$ comes $\omega + 3$.
+\item
+After every number in the list $\omega + 3, \omega + 4, \omega + 5, \ldots$ comes $\omega + \omega$. 
+\item
+This is the first number which comes after every number in the list $\omega, \omega + 1, \omega + 2, \omega + 3, \omega + 4, \omega + 5, \ldots$.
+\item
+We can also call it $2\omega$.
+\item
+The next number after $2\omega$ is $2\omega + 1$. 
+\item
+After $2\omega+1, 2\omega+2, 2\omega+3, 2\omega+4, \ldots$ comes $3\omega$.
+\item
+After $3\omega$ we have a whole list of numbers of the form $3\omega + \text{something}$, where something is a `normal number', in the obvious order, and then $4\omega$.
+\item
+We have the list 
+\[ \ldots \omega \ldots 2\omega \ldots 3\omega \ldots 4\omega \ldots  
+5\omega \ldots 6\omega \ldots 7\omega \ldots 8\omega \ldots \]
+and so on, where each $\ldots$ stands for an infinite list of numbers like $1,2,3,4,\ldots$.
+\item
+The first item that is not in this list is $\omega \omega$, or $\omega^2$.
+\item
+We then have 
+\[ \omega^2 + 1, \omega^2 + 2, \omega^2 + 3, \ldots, \omega^2 + \omega, \omega^2 + \omega + 1, \ldots, \omega^2 + 2\omega, \ldots, \omega^2 + 3\omega, \ldots, \omega^2 + 4\omega, \ldots, \omega^2 + \omega^2, \]
+\item
+We can also write $\omega^2 + \omega^2$ as $2\omega^2$. Later come $3\omega^2$, $4\omega^2$, etc. until we eventually get to $\omega \omega^2$ or $\omega^3$.
+Don't forget that $4\omega^2$ does not come directly after $3\omega^2$. We have to go through all the sublist at different levels:
+\begin{align*}
+3\omega^2 +1, 3\omega^2 + 2, \ldots, &3\omega^2 + \omega \\   
+3\omega^2 +\omega+1, 3\omega^2 +\omega+ 2, \ldots, &3\omega^2 + 2\omega \\   
+3\omega^2 +2\omega+1, 3\omega^2 +2\omega+ 2, \ldots, &3\omega^2 + 3\omega \\   
+& \vdots \\
+&4\omega^2 \\
+\end{align*}
+
+\item
+At the end of all of $\omega^3, \omega^4, \omega^5, \ldots$ comes $\omega^{\omega}$.
+\item
+After going through a list similar to everything we have done so far, and then again, and again, and again, \ldots, we get to $\omega \omega^{\omega}$, also written as $\omega^{\omega + 1}$.
+\item
+We eventually get to $\omega^{\omega^\omega}$. We will refer to a tower of $\omega$s stacked up as powers 
+\[ \omega^{\omega^{\omega^{\ldots^{\omega}}}} \]
+as $A_n$, where $n$ is the number of $\omega$s in the stack.
+\item
+We are already at $A_3$, later will come $A_4$, $A_5$, $A_{\omega}$ (which is the same as $A_{A_1}$), $A_{A_2}$, $A_{A_3}$, $A_{A_\omega}$, $A_{A_{A_2}}$, $A_{A_{A_\omega}}$, \ldots
+\item
+We call a tower $A_{A_{A_{\ddots_{A_\omega}}}}$ with $n$ $A$s in it $B_n$, and a tower $B_{B_{B_{\ddots_{B_\omega}}}}$ with $n$ $B$s in it $C_n$, and so on, and then use a shorthand where we call $A_\omega$ $\phi_1$ and $B_\omega$ $\phi_2$ and $C_\omega$ $\phi_3$, and then we get to $\phi_\omega$ and then $\phi_{\phi_\omega}$ and then $\phi_{\phi_{\phi_\omega}}$ and then we make up a new notation for that process, and take that notation as far as it will go, and then make up a new notation for that and take that as far as it will go, and then take that whole process as far as it will go, and then take that process as far as it will go, and then take that process as far as it will go.
+\item
+Then we take the process of making up new processes and taking then as far as they will go and do that again and again and again and then we make a new process of taking the previous process of making up processes and doing it again and again and again and do \highlight{that} again and again and again, \ldots
+\item
+The first number that is not in the list we just generated, we call $\Omega$.
+\item
+The next number after that is $\Omega + 1$ and so on \ldots
+\end{itemize}  

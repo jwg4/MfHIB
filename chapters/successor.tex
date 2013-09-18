@@ -1,0 +1,51 @@
+\chapter{0, followed by 1}
+\label{successor}
+\depends{counting}
+\sent{0.01}
+
+\begin{itemize}
+\item
+We have a process for creating successive numbers, starting from $0$. 
+\item
+If we have a starting point, $0$, we can find the number which comes after it, which we call $1$.
+\item
+Similarly, we can construct a number which comes after $1$.
+\item
+We call this number $2$, but its real definition is as the number that comes after $1$. This is how it gets it identity, $2$ is really only just its name. We can imagine calling the same number by a different name, but if it did not come after $1$ it would not be the same number.
+\item
+What defines $1$ \highlight{uniquely}, is that it is the \highlight{first} number that comes after $0$. 
+\item
+Clearly $1$ and $2$ (and $5$, \ldots) all come after $0$. But $1$ comes immediately after $0$: there is no number which comes after $0$ and which $1$ comes after. 
+\item
+Let us refer to this number as $S0$, or \term{successor} of $0$. 
+\item
+The first number which comes after $1$ is $2$. Otherwise expressed, the first number which comes after $S0$ is $SS0$.
+\item
+This means that we can recreate our list of numbers in a much simpler form. We start with a list containing only one number. At each step we take the last number of the current list, and add its successor to the list, to make a slightly longer list. 
+\item
+We have to start out with something (0), but if we do we can obtain a list of numbers as long as we like:
+\begin{align*}
+&0\\
+&0, S0\\
+&0, S0, SS0\\
+&0, S0, SS0, SSS0\\
+&0, S0, SS0, SSS0, SSSS0\\
+&0, S0, SS0, SSS0, SSSS0, SSSSS0\\
+&0, S0, SS0, SSS0, SSSS0, SSSSS0, SSSSSS0\\
+\cdots
+\end{align*}
+\item
+As we extend the list in this way, we never create a number which has already appeared in the list. This is a very obvious fact, but one which is difficult for us to prove formally at the moment.\footnote{It relies on us accepting that two things which have different names are different numbers. In general, just because two numbers are written differently, we cannot assume that they are different. For example $4$ and $2^2$ are the `same number'. In this case we will decide that unless we have some reason that we know two things are the same, we assume them to be different. It might be possible for, say $0$ and $SSSSSSSSSSSSSSSSSSSS0$ to be the same number. We treat them as different until it turns out that it is \highlight{impossible} for them not to be the same.}
+\item
+We have freed our numbers from any meaning or structure except the order they appear in. Many of the easy statements that we cam make about numbers are difficult to justify when we conceptualize numbers in this way.
+\item
+However, if we want to talk about properties of numbers related only to their \fterm{ordering}, (and not involving for instance, addition), it is easier to do so, because the names that we have for them are easier to handle. The numbers $3$ and $11$ are the same as the numbers $SSS0$ and $SSSSSSSSSSS0$, just referred to with a different naming scheme. However to check if $11$ comes after $3$ we have to be able to decode the names $3$ and $11$ to find out information about the numbers they refer to. To check that $SSSSSSSSSSS0$ comes after $SSS0$ is completely obvious -- we can see immediately that $SSSSSSSSSSS0$ comes after $SSSSSSSSSS0$ which comes after $SSSSSSSSS$ which comes after $SSSSSSS0$ which comes after $SSSSSSS0$ which comes after $SSSSSS0$ which comes after $SSSSS0$ which comes after $SSSS0$ which comes after $SSS0$. 
+\item
+Suppose that we had started with a different number than $0$. Say that instead our `original number' was called {\Peace}. We can generate an arbitrarily long list of numbers in the same way. Eg the first seven numbers in this list will be 
+\[ \text{\Peace}, S\text{\Peace}, SS\text{\Peace}, SSS\text{\Peace}, SSSS\text{\Peace}, SSSSS\text{\Peace}, SSSSSS\text{\Peace}  \]
+This list of numbers is very similar to the one which starts with $0$. Not only do we claim that these are different names for the same numbers, but there is a simple way of translating these names into the other names: just replace the symbol `\Peace` with the symbol `$0$' everywhere it appears.
+\item
+Similarly we regard a naming system for numbers as equivalent to this one if it is the same except that it uses a different symbol in the place of `$S$'. So the list 
+\[ A, BA, BBA, BBBA, BBBBA, BBBBBA, BBBBBBA, BBBBBBBA \] 
+is the same list of numbers as before, just written in a language where `$A$' means `$0$' and `$B$' means `$S$'.
+\end{itemize}

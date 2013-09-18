@@ -1,0 +1,34 @@
+\chapter{Cartesian products}
+\label{cartesian}
+\depends{tuples, empty, union}
+
+\begin{itemize}
+\item
+Take two sets, $A$ and $B$. The \term{Cartesian product of $A$ and $B$}, written $A \times B$, is the following set:
+\[ \{(x,y) : x \in A, y \in B \} \]
+\item
+Example: if $A = \{1, 3, 5\}$ and $B = \{``j'', ``k'''\}$, then 
+\[ A \times B = \{(1, ``j''), (3, ``j''), (5, ``j''), (1, ``k''), (3, ``k'') , (5, ``k'') \} \]
+\item
+We can form Cartesian products with singleton sets:
+\[ \{2\} \times \{J. Edgar Hoover, Lee Harvey Oswald, William the Lionheart\} =  \{(2, J. Edgar Hoover), (2, Lee Harvey Oswald), (2, William the Lionheart)\} \]
+(this is what we did in Chapter \ref{addition} where we first mentioned tuples), \[ \{4\} \times \{6\} = \{(4,6)\} \]
+with the empty set:
+\[ \{\} \times \{a, b, c, d, e, 14 \} = \{\} \]
+\[ \emptyset \times \emptyset = \emptyset \]
+and with infinite sets:
+\[ \ldots \]
+\item
+We can form the Cartesian product of a set with itself:
+
+Any overlap between the members of the set isn't discarded or ignored like with unions (see Chapter \ref{union}). All members of both sets are used for making pairs.
+\item
+$A \times B$ is not the same as $B \times A$. They are similar, but the order of the pairs is different:
+
+\item
+We can form the product of more than two sets at once. This is a set which contains not pairs but longer tuples:
+
+This can become confusing: $A \times B \times C$ is not the same as $(A \times B) \times C$ or $A \times (B \times C)$.
+
+Sometimes we don't care about the exact bracketing, but usually we should.
+\end{itemize}

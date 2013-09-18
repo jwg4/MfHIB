@@ -1,0 +1,28 @@
+\chapter{Addition}
+\label{addition}
+\depends{ambiguity}
+
+\begin{itemize}
+\item
+It turns out that we know that $2 + 2 = 4$ much better than we know what either $2$ or $4$ are. Let's try and interpret the statement that $2 + 2 = 4$ using our justification for what numbers are.
+\item
+If numbers are cardinal numbers, the ``number of elements in a set'' then the idea is clear. Take two sets, each containing two elements, and form a new set by ``putting them together'' somehow. The new set will have four elements.
+\item
+Putting them together somehow will mean forming the \fterm{union} of the two sets -- the set which contain all the elements from both sets, and no other members. 
+\item
+A problem arises if there is some overlap between our two sets. The union of $\{23, 24\}$ (2 elements) and $\{24, 10\}$ (2 elements) is the set $\{23, 10, 24\}$ -- it only has three elements.
+This is a special shame if we are adding together two numbers the same, such as the sum $2 + 2$. Our life would be as easy as possible if every time we use a number, we can use the same set to `represent' it. So $2$ would always be $\{0,1\}$ and so on. But 
+\[ \{0,1\} + \{0,1\} = \{0,1\} \]
+which has only two elements. So by this way of working we have $2 + 2 = 2$!
+\item
+So addition of numbers works, where numbers `mean' the result of counting the elements in a set, but we have to choose the correct sets each time. The choice of the correct set depends on what we are going to add it to. This makes things difficult if we want to for example add $17$ to $24$, then add $3$ to $0$, then add the two results together. When we add $17$ and $24$, we choose `representative sets' for the numbers 17 and 24. We get another set as the result of the addition, which hopefully has 41 elements. Then we choose representative sets for 3 and 0\footnote{There is only one representative set with $0$ elements.}, making sure that there is no overlap between them so that we can add them properly. But when we go to add our resulting set with 3 elements to the set with 41 elements, we find out that we didn't check in advance that these two sets don't overlap. We might have to replace our sets with some other sets with the same numbers of elements, chosen this time with the addition $41 + 3$ in mind.
+\item
+Although we can always find enough new elements for our sets to make sure that all our additions work,\footnote{How?} this back-and-forth between sets and numbers each time is not as neat as if we could simply pick one interpretation of each number and stick with it.
+\item
+One way of doing this is to redefine what `adding' two sets means. Instead of forming the \fterm{union} of the two sets, we transform the two sets a little, and then take their union. Suppose we are adding two sets called $A$ and $B$. We form the set A', defined by\footnote{Two new concepts are being introduced here. The symbol ``:='' means `is defined to be'. If you see this sign you are not expected to understand why the two things are equal, you are being warned that the one on the `:' side is going to be used to refer to the other one from now on. 
+
+Secondly the notation for defining a set is a little different to what we have seen before\ldots}
+\[ A' := \{ (x,1) : x \in A \} \]
+and the set B', defined by 
+\[ B' := \{ (x,2) : x \in B \} \]
+\end{itemize}
